@@ -1,0 +1,60 @@
+/ ### !important créer les variable depuis source.json
+-require 'json'
+-file = File.read('source.json')
+-$objso = JSON.parse(file)
+/ change date - THEME - pkImg -link @see source.json
+/ DON'T change google PK x3 track
+-ggpk = { #...,
+  pck1: "'#{$objso['pdt']['fr']['0'][0]}_#{$objso['pdt']['fr']['1'][1]}_#{$objso['pdt']['fr']['1'][2]}', ", pck2: "'#{$objso['pdt']['fr']['0'][1]}_#{$objso['pdt']['fr']['2'][1]}_#{$objso['pdt']['fr']['2'][2]}', ", pck3: "'#{$objso['pdt']['fr']['0'][2]}_#{$objso['pdt']['fr']['3'][1]}_#{$objso['pdt']['fr']['3'][2]}', ", pck4: "'#{$objso['pdt']['fr']['0'][3]}_#{$objso['pdt']['fr']['4'][1]}_#{$objso['pdt']['fr']['4'][2]}', ",
+  pck1_bf: "'#{$objso['pdt']['bf']['0'][0]}_#{$objso['pdt']['bf']['1'][1]}_#{$objso['pdt']['bf']['1'][2]}', ", pck2_bf:   "'#{$objso['pdt']['bf']['0'][1]}_#{$objso['pdt']['bf']['2'][1]}_#{$objso['pdt']['bf']['2'][2]}', ", pck3_bf: "'#{$objso['pdt']['bf']['0'][2]}_#{$objso['pdt']['bf']['3'][1]}_#{$objso['pdt']['bf']['3'][2]}', ", pck4_bf: "'#{$objso['pdt']['bf']['0'][3]}_#{$objso['pdt']['bf']['4'][1]}_#{$objso['pdt']['bf']['4'][2]}', ",
+  pck1_de: "'#{$objso['pdt']['de']['0'][0]}_#{$objso['pdt']['de']['1'][1]}_#{$objso['pdt']['de']['1'][2]}', ", pck2_de:   "'#{$objso['pdt']['de']['0'][1]}_#{$objso['pdt']['de']['2'][1]}_#{$objso['pdt']['de']['2'][2]}', ", pck3_de: "'#{$objso['pdt']['de']['0'][2]}_#{$objso['pdt']['de']['3'][1]}_#{$objso['pdt']['de']['3'][2]}', ", pck4_de: "'#{$objso['pdt']['de']['0'][3]}_#{$objso['pdt']['de']['4'][1]}_#{$objso['pdt']['de']['4'][2]}', ",
+  pck1_nl: "'#{$objso['pdt']['nl']['0'][0]}_#{$objso['pdt']['nl']['1'][1]}_#{$objso['pdt']['nl']['1'][2]}', ", pck2_nl:   "'#{$objso['pdt']['nl']['0'][1]}_#{$objso['pdt']['nl']['2'][1]}_#{$objso['pdt']['nl']['2'][2]}', ", pck3_nl: "'#{$objso['pdt']['nl']['0'][2]}_#{$objso['pdt']['nl']['3'][1]}_#{$objso['pdt']['nl']['3'][2]}', ", pck4_nl: "'#{$objso['pdt']['nl']['0'][3]}_#{$objso['pdt']['nl']['4'][1]}_#{$objso['pdt']['nl']['4'][2]}', ",
+  pck1_bv: "'#{$objso['pdt']['bv']['0'][0]}_#{$objso['pdt']['bv']['1'][1]}_#{$objso['pdt']['bv']['1'][2]}', ", pck2_bv:   "'#{$objso['pdt']['bv']['0'][1]}_#{$objso['pdt']['bv']['2'][1]}_#{$objso['pdt']['bv']['2'][2]}', ", pck3_bv: "'#{$objso['pdt']['bv']['0'][2]}_#{$objso['pdt']['bv']['3'][1]}_#{$objso['pdt']['bv']['3'][2]}', ", pck4_bv: "'#{$objso['pdt']['bv']['0'][3]}_#{$objso['pdt']['bv']['4'][1]}_#{$objso['pdt']['bv']['4'][2]}', ",
+  pck1_uk: "'#{$objso['pdt']['uk']['0'][0]}_#{$objso['pdt']['uk']['1'][1]}_#{$objso['pdt']['uk']['1'][2]}', ", pck2_uk:   "'#{$objso['pdt']['uk']['0'][1]}_#{$objso['pdt']['uk']['2'][1]}_#{$objso['pdt']['uk']['2'][2]}', ", pck3_uk: "'#{$objso['pdt']['uk']['0'][2]}_#{$objso['pdt']['uk']['3'][1]}_#{$objso['pdt']['uk']['3'][2]}', ", pck4_uk: "'#{$objso['pdt']['uk']['0'][3]}_#{$objso['pdt']['uk']['4'][1]}_#{$objso['pdt']['uk']['4'][2]}', ",
+  }
+// do not change > base URL
+-$urlfr = "https://www.tempsl.fr/fr/"
+-$urlIC = ["https://www.ideal-","pratique.be/befr/","praktijk.be/bevl/","praktisch.de/de/","praktijk.nl/nl/","practical.co.uk/uk/"]
+// do not change google track
+-ggstart = "ga('local.send', 'event', 'EncartHP', "
+-ggend = "document.location.pathname);"
+-$ggall_fr = [0, ggstart+ggpk[:pck1]+ggend, ggstart+ggpk[:pck2]+ggend, ggstart+ggpk[:pck3]+ggend, ggstart+ggpk[:pck4]+ggend]
+-$ggall_bf = [0, ggstart+ggpk[:pck1_bf]+ggend, ggstart+ggpk[:pck2_bf]+ggend, ggstart+ggpk[:pck3_bf]+ggend, ggstart+ggpk[:pck4_bf]+ggend]
+-$ggall_de = [0, ggstart+ggpk[:pck1_de]+ggend, ggstart+ggpk[:pck2_de]+ggend, ggstart+ggpk[:pck3_de]+ggend, ggstart+ggpk[:pck4_de]+ggend]
+-$ggall_nl = [0, ggstart+ggpk[:pck1_nl]+ggend, ggstart+ggpk[:pck2_nl]+ggend, ggstart+ggpk[:pck3_nl]+ggend, ggstart+ggpk[:pck4_nl]+ggend]
+-$ggall_bv = [0, ggstart+ggpk[:pck1_bv]+ggend, ggstart+ggpk[:pck2_bv]+ggend, ggstart+ggpk[:pck3_bv]+ggend, ggstart+ggpk[:pck4_bv]+ggend]
+-$ggall_uk = [0, ggstart+ggpk[:pck1_uk]+ggend, ggstart+ggpk[:pck2_uk]+ggend, ggstart+ggpk[:pck3_uk]+ggend, ggstart+ggpk[:pck4_uk]+ggend]
+// do not change
+- $pck1 = { #...,
+  fr: "#{$urlfr}#{$objso['pdt']['fr']['1'][0]}#{$objso['pdt']['fr']['1'][1]}/#{$objso['pdt']['fr']['1'][2]}.html",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{$objso['pdt']['bf']['1'][0]}#{$objso['pdt']['bf']['1'][1]}/#{$objso['pdt']['bf']['1'][2]}.html",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{$objso['pdt']['bv']['1'][0]}#{$objso['pdt']['bv']['1'][1]}/#{$objso['pdt']['bv']['1'][2]}.html",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{$objso['pdt']['nl']['1'][0]}#{$objso['pdt']['nl']['1'][1]}/#{$objso['pdt']['nl']['1'][2]}.html",
+  de: "#{$urlIC[0]+$urlIC[3]}#{$objso['pdt']['de']['1'][0]}#{$objso['pdt']['de']['1'][1]}/#{$objso['pdt']['de']['1'][2]}.html",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{$objso['pdt']['uk']['1'][0]}#{$objso['pdt']['uk']['1'][1]}/#{$objso['pdt']['uk']['1'][2]}.html",
+  }
+- $pck2 = { #...,
+  fr: "#{$urlfr}#{$objso['pdt']['fr']['2'][0]}#{$objso['pdt']['fr']['2'][1]}/#{$objso['pdt']['fr']['2'][2]}.html",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{$objso['pdt']['bf']['2'][0]}#{$objso['pdt']['bf']['2'][1]}/#{$objso['pdt']['bf']['2'][2]}.html",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{$objso['pdt']['bv']['2'][0]}#{$objso['pdt']['bv']['2'][1]}/#{$objso['pdt']['bv']['2'][2]}.html",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{$objso['pdt']['nl']['2'][0]}#{$objso['pdt']['nl']['2'][1]}/#{$objso['pdt']['nl']['2'][2]}.html",
+  de: "#{$urlIC[0]+$urlIC[3]}#{$objso['pdt']['de']['2'][0]}#{$objso['pdt']['de']['2'][1]}/#{$objso['pdt']['de']['2'][2]}.html",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{$objso['pdt']['uk']['2'][0]}#{$objso['pdt']['uk']['2'][1]}/#{$objso['pdt']['uk']['2'][2]}.html",
+  }
+- $pck3 = { #...,
+  fr: "#{$urlfr}#{$objso['pdt']['fr']['3'][0]}#{$objso['pdt']['fr']['3'][1]}/#{$objso['pdt']['fr']['3'][2]}.html",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{$objso['pdt']['bf']['3'][0]}#{$objso['pdt']['bf']['3'][1]}/#{$objso['pdt']['bf']['3'][2]}.html",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{$objso['pdt']['bv']['3'][0]}#{$objso['pdt']['bv']['3'][1]}/#{$objso['pdt']['bv']['3'][2]}.html",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{$objso['pdt']['nl']['3'][0]}#{$objso['pdt']['nl']['3'][1]}/#{$objso['pdt']['nl']['3'][2]}.html",
+  de: "#{$urlIC[0]+$urlIC[3]}#{$objso['pdt']['de']['3'][0]}#{$objso['pdt']['de']['3'][1]}/#{$objso['pdt']['de']['3'][2]}.html",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{$objso['pdt']['uk']['3'][0]}#{$objso['pdt']['uk']['3'][1]}/#{$objso['pdt']['uk']['3'][2]}.html",
+  }
+- $pck4 = { #...,
+  fr: "#{$urlfr}#{$objso['pdt']['fr']['4'][0]}#{$objso['pdt']['fr']['4'][1]}/#{$objso['pdt']['fr']['4'][2]}.html",
+  bf: "#{$urlIC[0]+$urlIC[1]}#{$objso['pdt']['bf']['4'][0]}#{$objso['pdt']['bf']['4'][1]}/#{$objso['pdt']['bf']['4'][2]}.html",
+  bv: "#{$urlIC[0]+$urlIC[2]}#{$objso['pdt']['bv']['4'][0]}#{$objso['pdt']['bv']['4'][1]}/#{$objso['pdt']['bv']['4'][2]}.html",
+  nl: "#{$urlIC[0]+$urlIC[4]}#{$objso['pdt']['nl']['4'][0]}#{$objso['pdt']['nl']['4'][1]}/#{$objso['pdt']['nl']['4'][2]}.html",
+  de: "#{$urlIC[0]+$urlIC[3]}#{$objso['pdt']['de']['4'][0]}#{$objso['pdt']['de']['4'][1]}/#{$objso['pdt']['de']['4'][2]}.html",
+  uk: "#{$urlIC[0]+$urlIC[5]}#{$objso['pdt']['uk']['4'][0]}#{$objso['pdt']['uk']['4'][1]}/#{$objso['pdt']['uk']['4'][2]}.html",
+  }
+-$pkImg = $objso['pkImg']

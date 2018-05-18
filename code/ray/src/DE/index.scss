@@ -1,0 +1,28 @@
+$ftss: Arial, Helvetica, sans-serif;
+$fts: Georgia, Times, "Times New Roman", serif;
+$primary-color: #FF3300;
+$txt-color: $primary-color;
+
+#shpEncartRayonEvent {
+  text-align: center;
+  max-width: 962px;
+  // height: 70px;
+  margin: 20px auto 0;
+  // border: 1px solid none; /* $primary-color */
+  .chapeau-ray {
+    display: block;
+    width: 100%;
+    // border-radius: 12px;
+    // background: url(imgRayEvt.jpg) 0 0 no-repeat;
+  }
+  .like-h1 {
+    position: relative;
+    top: -55px;
+    color: #598B17;
+    font: normal bold 36px "Roboto",sans-serif;
+  }
+}
+// commentaires non silencieux > /*! */
+/*! surcharge styleV4.css */
+#surcharge, #container #tetiere {height: auto; margin-top: 10px; line-height: normal; border-bottom: none; text-indent: 0; color: $txt-color; }
+,#contentBG #container {padding-top: 0;}

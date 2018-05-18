@@ -1,0 +1,23 @@
+/ tobechange // !important save indexC.sliml to validate change
+-$url = "https://www.ideal-praktisch.de/de/"
+
+-$txtBtn  = ["Entdecken Sie unsere Auswahl",""]
+-$linkRay = "#{$url}boutique/rayon_evenement.aspx?urlLangue=fr&nbp=99&pg=0&evenement_id="+$objso['id']['de']
+
+
+-gastart  = "ga('local.send', 'event', 'EncartHP', "
+-gaend    = " document.location.pathname);"
+
+-$ga_ray_BG  = "ga('local.send', 'event', 'EncartHP', '"+$objso['projectname']+"-BG_id-"+$objso['id']['de']+"', document.location.pathname);";
+-$ga_ray_btn  = "ga('local.send', 'event', 'EncartHP', '"+$objso['projectname']+"-btn_id-"+$objso['id']['de']+"', document.location.pathname);";
+
+-$titre1  = "INSEKTENHEMMER";
+-$sTitre1 = ["Fliegende Insekten","Kriechende Insekten","Flasche mit 500 ml"];
+
+-$titre2  = "Insektenlampe Arabesken";
+-$sTitre2 = ["Aufstellen oder Aufhängen","Ohne Chemikalien"];
+
+-$titre3  = "2er-Set Insektenfallen";
+-$sTitre3 = ["Wirksam und umweltfreundlich","Stabiler Kunststoff"];
+
+-$styleIE = '<!--[if lte IE 9]> <style type="text/css"> .pck3{top: 10px;} .title-pck3, .sub1-pck3, .sub2-pck3{left: 690px;} </style> <![endif]-->'

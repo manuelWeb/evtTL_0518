@@ -1,0 +1,77 @@
+{
+  "date": "0518",
+  "projectname": "TH07_salades",
+  "id": {
+    "bf": "1744",
+    "bv": "1748",
+    "de": "1747",
+    "fr": "1745",
+    "nl": "1743",
+    "uk": "1746"
+  },
+  "titre": {
+    "bf": ["Composez vos salades ", "comme des Chefs !",""],
+    "bv": ["Verwen uzelf, eet gezond!", "", ""],
+    "de": ["Verwöhnen Sie sich und essen Sie gesund!", "", ""],
+    "fr": ["Composez vos salades ", "comme des Chefs !",""],
+    "nl": ["Verwen uzelf, eet gezond!", "", ""],
+    "uk": ["Treat yourself, eat healthy!", "", ""]
+  },
+  "price": {
+    "fr": "Sélection<br />à partir de", "ent": "6", "dec": ".95", "unit": "€", "unituk": "£",
+    "de": "Sortiment<br />ab", "nl": "Auswahl<br />ab", "uk": "Selection<br />from"
+  },
+  "txtBtn" : {
+    "bf": "Découvrez nos nouveautés",
+    "bv": "Ontdek onze nieuwigheden",
+    "de": "Entdecken Sie unsere Neuigkeiten",
+    "fr": "Découvrez nos nouveautés",
+    "nl": "Ontdek onze nieuwigheden",
+    "uk": "Discover our novelties"
+  },
+  "pdt": {
+    "bf": {
+      "0": ["pk1", "pk2", "pk3", "pk4"],
+      "1": ["cuisine/decoupe/", "eminceur-salade", "3881117"],
+      "2": ["cuisine/boites-cuisine/", "5-boites-saladier", "0867416"],
+      "3": ["cuisine/decoupe/", "pince-coupe-tomates", "5556014"],
+      "4": ["univer/Sousunivers-path/pk4/", "lib-pk4", "ref-pk4"]
+    },
+    "bv": {
+      "0": ["pk1", "pk2", "pk3", "pk4"],
+      "1": ["keuken/snijden/", "slaversnipperaar", "3881117"],
+      "2": ["keuken/dozen-voor-keuken/", "5-bewaarkommen", "0867416"],
+      "3": ["keuken/snijden/", "tomatensnijtang", "5556014"],
+      "4": ["univer/Sousunivers-path/pk4/", "lib-pk4", "ref-pk4"]
+    },
+    "de": {
+      "0": ["pk1", "pk2", "pk3", "pk4"],
+      "1": ["kuche/mikrowelle/", "2-visio-garschlauche", "6722318"],
+      "2": ["kuche/schneiden/", "julienneschneider-grun", "3697315"],
+      "3": ["kuche/kochgerate/", "plancha-alle-herdarten-kleines-modell", "1634112"],
+      "4": ["univer/Sousunivers-path/pk4/", "lib-pk4", "ref-pk4"]
+    },
+    "fr": {
+      "0": ["pk1", "pk2", "pk3", "pk4"],
+      "1": ["cuisine/decoupe/", "eminceur-salade", "3881117"],
+      "2": ["cuisine/boites-cuisine/", "5-boites-saladier", "0867416"],
+      "3": ["cuisine/decoupe/", "pince-coupe-tomates", "5556014"],
+      "4": ["univer/Sousunivers-path/pk4/", "lib-pk4", "ref-pk4"]
+    },
+    "nl": {
+      "0": ["pk1", "pk2", "pk3", "pk4"],
+      "1": ["keuken/magnetron/", "2-visio-ovenschaaltjes", "6722318"],
+      "2": ["keuken/snijden/", "groene-juliennesnijder-dunschiller", "3697315"],
+      "3": ["keuken/keukenapparatuur/", "alle-vuren-plancha-klein-model", "1634112"],
+      "4": ["univer/Sousunivers-path/pk4/", "lib-pk4", "ref-pk4"]
+    },
+    "uk": {
+      "0": ["pk1", "pk2", "pk3", "pk4"],
+      "1": ["kitchen/microwave/", "2-visio-papillotes", "6722318"],
+      "2": ["kitchen/cutting/", "green-julienne-peeler", "3697315"],
+      "3": ["kitchen/cooking-appliances/", "griddle-suitable-for-all-hobs-small", "1634112"],
+      "4": ["univer/Sousunivers-path/pk4/", "lib-pk4", "ref-pk4"]
+    }
+  },
+  "pkImg" : false
+}

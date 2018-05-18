@@ -1,0 +1,54 @@
+== Slim::Template.new('evtSrc/var_global.slim').render
+== Slim::Template.new('evtSrc/FR/var.slim').render
+doctype strict
+html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+  head
+    meta http-equiv="Content-Type" content="text/html;charset=UTF-8"
+    title == $objso['projectname']
+    link type="text/css" rel="stylesheet" href="index.css"
+    / link href="evtSrc/FR/index.scss"
+    script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"
+  body
+    / == $styleIE
+    #evtFirst_Link.centralEvent
+      #globalLink
+        .bottomfade
+
+      // titre
+      span.h1-like
+        == $objso["titre"]["fr"][0]
+        - if $objso["titre"]["fr"][1] != ""
+          span
+            == $objso["titre"]["fr"][1]
+            span
+              == $objso["titre"]["fr"][2]
+
+      // prix elipse
+      .price
+        .v-h-center
+          == $objso['price']['fr']
+          br
+          b
+            span == $objso['price']['ent']
+            == $objso['price']['dec'] + $objso['price']['unit']
+
+      //pk
+      ul
+        -for i in (1..3) do
+          li
+            a class="pck#{i}" href==(eval("$pck#{i}[:fr]")) onclick==($ggall_fr[i])
+              -if $pkImg == true
+                img src="pk#{i}.png" alt=""
+
+      a.js-btn.gradient-btn-evtfirst href==($linkRay) onclick==($ga_ray_btn)
+        / span.reflet &nbsp;
+        span
+          == $objso['txtBtn']['fr']
+          -if $txtBtn[1] != ""
+            br
+            == ($txtBtn[1])
+            /span.move
+            /  == ($txtBtn[1])
+
+    script type="text/javascript" src="track.js"
+    / script type="text/javascript" src="firstEvt_reveal.js"
